@@ -13,7 +13,7 @@ h1 {
   margin-bottom: 15px;
 }
 main {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   border-bottom: 1px solid #f9f7fe;
 }
 
@@ -21,19 +21,22 @@ p {
   color: rgba(39, 33, 66, 0.4);
   font-weight: 500;
   line-height: 24px;
+  font-size: 16px;
 }
 input {
-  line-height: 1.5;
   font-size: 16px;
-  padding: 12px 260px 12px 15px;
+  padding: 15px 20px;
   border-radius: 6px;
   border: none;
+}
+a {
+  color: #885df1;
 }
 footer {
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 .app-box {
   background-color: white;
@@ -44,16 +47,35 @@ footer {
   box-shadow: rgba(65, 50, 100, 0.08) 0px 30px 50px 0px;
 }
 .search-input {
-  border: none;
   background: #f9f7fe;
   margin-right: 7px;
+  width: 80%;
 }
 .search-button {
-  padding-right: 32px;
-  padding-left: 28px;
   color: white;
   background: #885df1;
 }
+.weather-data {
+  display: flex;
+  justify-content: space-between;
+}
+.weather-data strong {
+  color: #f65282;
+}
 .current-temperature {
   display: flex;
+}
+
+.current-emoji {
+  font-size: 44px;
+  margin-top: 22px;
+}
+.current-temp-number {
+  font-size: 88px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.current-unit {
+  font-size: 28px;
+  margin-top: 16px;
 }
