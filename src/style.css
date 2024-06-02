@@ -67,15 +67,16 @@ footer {
 }
 
 .current-emoji {
-  font-size: 44px;
-  margin-top: 22px;
+  width: 88px;
+  height: 88px;
 }
 .current-temp-number {
   font-size: 88px;
   margin-left: 10px;
   font-weight: bold;
+  line-height: 88px;
 }
 .current-unit {
   font-size: 28px;
-  margin-top: 16px;
+  margin-top: 6px;
 }
