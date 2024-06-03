@@ -17,6 +17,7 @@ function updateWeather(response) {
   time.innerHTML = formatDate(date);
   let icon = document.querySelector("#icon");
   icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-emoji"/>`;
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let hours = date.getHours();
@@ -54,7 +55,14 @@ function changeCity(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "2t553f9381106a3576b3bf8c8coa7bc4";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response);
   let forecastElement = document.querySelector("#forecast");
   let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   let forecastHtml = "";
@@ -78,4 +86,5 @@ function displayForecast() {
 let searchForm = document.querySelector("form");
 searchForm.addEventListener("submit", changeCity);
 searchCity("Cottbus");
+getForecast("Cottbus");
 displayForecast();
